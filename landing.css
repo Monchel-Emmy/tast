@@ -1,0 +1,95 @@
+body{
+   
+}
+
+.firstpart{
+     background: rgba(0,0,0,0.5)url("study.jpg"); 
+    background-size: cover;
+    background-blend-mode: darken;
+   
+    color: aliceblue;
+    /* opacity: 0.7; */
+    height: 35rem;
+}
+.firstpart .top{
+    height: 3rem;
+    /* background-color: aquamarine; */
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+} 
+.firstpart .p{
+    padding-top: 10rem;
+   padding-left: 20rem;
+   font-size: large;
+   font-weight: 300;
+    
+} 
+
+.firstpart .top .logo{
+    padding: 0rem 3rem;
+}
+
+.firstpart .top .logo img{
+    height: 4rem;
+    width: 6rem;
+    border-radius: 1rem;
+}
+.secondpart{
+    background-color: rgb(230, 165, 86);
+    height: 19rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+}
+.secondpart .grid1{ 
+    color: rgb(5, 5, 5);
+    background-color: rgb(255, 254, 254);
+    padding: 2rem 2rem;
+    height: 15rem;
+}
+.secondpart .grid1 img{ 
+  height: 11rem;
+  width: 100%;
+}
+
+
+.secondpart .grid2{ 
+    color: rgb(5, 5, 5);
+    background-color: rgb(255, 255, 255);
+    padding: 2rem 2rem;
+    height: 15rem;
+}
+.secondpart .grid2 img{ 
+  height: 11rem;
+  width: 100%;
+}
+
+
+
+.secondpart .grid3{ 
+    color: rgb(5, 5, 5);
+    background-color: rgb(255, 255, 255);
+    padding: 2rem 2rem;
+    height: 15rem;
+}
+.secondpart .grid3 img{ 
+  height: 11rem;
+  width: 100%;
+}
+
+.other{
+    background-color: aliceblue;
+    height: 3rem;
+    padding-top: 1rem;
+}
+
+.thirdpart{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem 5rem;
+    background-color: rgb(88, 209, 159);
+    color: aliceblue;
+    height: 9rem;
+}
