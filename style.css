@@ -74,7 +74,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 1rem 5rem;
-    background-color: rgb(88, 209, 159);
+    background-color:rgb(15, 122, 136);
     color: aliceblue;
     height: 9rem;
 }
