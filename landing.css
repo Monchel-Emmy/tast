@@ -1,5 +1,7 @@
-body{
-   
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+    padding: 0;
 }
 
 .firstpart{
@@ -87,9 +89,25 @@ body{
 
 .thirdpart{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 1rem 5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 4rem 9rem 2rem;
+    border-block-start-style: dotted;
+    border-block-start-color: brown;
+    padding: 4rem;
     background-color:rgb(15, 122, 136);
     color: aliceblue;
-    height: 9rem;
+    height: 15rem;
+}
+
+
+.thirdpart .part0{
+    border-left-style: dotted;
+    border-left-color: rgb(0, 0, 0);
+    margin-left: rem;
+   
+}
+.thirdpart .partcopy{
+    margin: 4rem;
+   grid-column: span 5;
+   
 }

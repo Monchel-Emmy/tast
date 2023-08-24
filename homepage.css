@@ -58,6 +58,7 @@ display: block;
 position: absolute;
 background: rgb(15, 26, 15);
 /* width: 100%; */
+border-radius: 10px;
 
 margin-left: -70px;
 }

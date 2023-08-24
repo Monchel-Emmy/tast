@@ -130,12 +130,3 @@ margin-left: -70px;
     margin-top: 35rem;
 }
 
-.thirdpart{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 1rem 5rem;
-    margin-top: 1rem;
-    background-color:rgb(15, 122, 136);
-    color: aliceblue;
-    height: 9rem;
-}
