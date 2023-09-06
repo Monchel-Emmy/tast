@@ -1,9 +1,16 @@
 body {
-    font-family: Arial, sans-serif;
+   
     margin: 2rem;
     padding: 0;
+    position: absolute;
 }
-
+*{ 
+    font-family: Arial, sans-serif;
+    padding:0;
+    margin:0; 
+    box-sizing:border-box;
+    color:black;
+}
 .firstpart{
      background: rgba(0,0,0,0.5)url("study.jpg"); 
     background-size: cover;
@@ -38,50 +45,28 @@ body {
     width: 6rem;
     border-radius: 1rem;
 }
-.secondpart{
-    background-color: rgb(230, 165, 86);
-    height: 19rem;
+
+
+.box-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 3px;
 }
-.secondpart .grid1{ 
-    color: rgb(5, 5, 5);
-    background-color: rgb(255, 254, 254);
-    padding: 2rem 2rem;
-    height: 15rem;
+.box-container .box{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    color: white;
+    background-color:  rgb(30, 107, 84);;
+    /* text-align: center; */
+    padding: 30px 20px;
 }
-.secondpart .grid1 img{ 
-  height: 11rem;
-  width: 100%;
-}
-
-
-.secondpart .grid2{ 
-    color: rgb(5, 5, 5);
-    background-color: rgb(255, 255, 255);
-    padding: 2rem 2rem;
-    height: 15rem;
-}
-.secondpart .grid2 img{ 
-  height: 11rem;
-  width: 100%;
+.box img{
+    width: 100%;
 }
 
-
-
-.secondpart .grid3{ 
-    color: rgb(5, 5, 5);
-    background-color: rgb(255, 255, 255);
-    padding: 2rem 2rem;
-    height: 15rem;
-}
-.secondpart .grid3 img{ 
-  height: 11rem;
-  width: 100%;
-}
 
 .other{
+    margin-top: 3rem;
     background-color: aliceblue;
     height: 3rem;
     padding-top: 1rem;

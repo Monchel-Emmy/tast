@@ -1,3 +1,10 @@
+<?php
+session_start();
+$fname = $_SESSION['fname'];
+$lname = $_SESSION['lname'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,59 +21,9 @@
 <body >
 
 
-   <div class="firstpart">
-      <div class="top">
-         <div class="logo"><img src="logo.png" alt="logo"> </div>  <div class="logo"><a href="homepage.html">HOME</a> |<a href="courses2.html">COURSES</a>| <a href="question2.html">QUESTIONS</a>  </div>
-      </div>
-
-      <div class="logo" style="margin-top:1rem; background-color: rgb(15, 122, 136); height: 5rem;" >  <div class="menu-bar">
-         <ul>
-             <li class="actie"><a href="class.html">CLASS</a></li>
-             
-             <li><a href="#">Tutorials</a>
-             <div class="submenu">
-                 <ul>
-                     <li><a href="tutorials.html">WEB DEVELOPMENT</a></li>
-                     <li><a href="tutorials.html">APP DEVELOPMENT</a></li>
-                     <li><a href="tutorials.html">ENGINEERING COURSES</a></li>
-                     <li><a href="tutorials.html">ECONOMIC COURSES</a></li>
-                     <li><a href="tutorials.html">ENTERPRENEURSHIP</a></li>
-                     <li><a href="tutorials.html">LEADERSHIP</a></li>
-                 </ul>
-             </div>
-             </li>
-             <li><a href="#">Exercises</a>
-                 <div class="submenu">
-                     <ul>
-                         <li><a href="exercises.html">MATH</a></li>
-                         <li><a href="exercises.html">OS</a></li>
-                         <li><a href="exercises.html">PHYSICS</a>
-                             <li><a href="exercises.html">MATH</a></li>
-                             <li><a href="exercises.html">OS</a></li>
-                             <li><a href="exercises.html">PHYSICS</a>
-     
-                     </ul></li>
-             
-     
-             <li><a href="#">Documents</a>
-                 <div class="submenu">
-                     <ul>
-                         <li><a href="books.html">BOOKS</a></li>
-                         <li><a href="books.html">SYLABUS</a></li>
-                         <li><a href="books.html">Passed Exams</a></li>
-                         <li><a href="books.html"> others</a></li>
-                     </ul>
-             </li>
-         </ul><ul style="padding-left: 400px;"> <span style=" background-color: white; margin-bottom: 30px;  height: 2rem; width: 2rem; border-radius: 50%;"> <img src="study.jpg" alt=""  style="width: 2rem; height: 2rem; border-radius: 50%; ">    <li><a href="#">Monchel</a>
-             <div class="submenu">
-                 <ul>
-                     <li><a href="#">Edit Profile</a></li>
-                     <li><a href="#">Your progress</a></li>
-                     <li><a href="#">settings</a></li>
-                     <li><a href="landingpage.html"> Logout</a></li>
-                 </ul>
-         </li> </span></ul>
-     </div></div>
+<?php
+   include('header.php');
+   ?>
         
       <div class="container">
          <div style="color: blue;">
@@ -86,43 +43,9 @@
        </div>
    
        <center> <div class="other"> Help Center:</div><hr>
-        <div class="thirdpart">
-            <div class="part0"><h3>EDUCATIONAL TOOLS</h3></div>
-            <div class="part0"> <h3>SUPPORT</h3> </div>
-            <div class="part0"> <h3>CONNECT</h3></div>
-            <div class="part0"> <h3>About</h3></div>
-            <div class="part0"> <h3>Address</h3></div>
-            <div class="part0">
-                <span>Learning Library</span><br>
-                <span>Guided Lessons</span><br>
-                <span></span><br>
-             </div>
-            <div class="part0"> 
-                <span>Help Center</span><br>
-                <span>Give Gift</span><br>
-                <span>Contact Us</span><br>
-                <span>FeedBack</span><br></div>
-            <div class="part0">
-    
-                <span>Our Blog</span><br>
-                <span>Tell us what you think</span><br>
-                <span>Youtube</span><br>
-                <span>Whatsapp</span><br>
-                <span>Tweeter</span><br>
-                <span>LinkedIn</span><br>
-            </div>
-            <div class="part0">
-                <span>Company</span><br>
-                <span>Privacy Policy</span><br>
-                <span>Terms and Service</span><br>
-            </div>
-            <div class="part0">
-                <span>Rwanda , Kigali city</span><br>
-                <span>phoneNumber:+25782419365</span><br>
-                <span>Email: LearnAll@gmail.com</span><br>
-            </div>
-            <div class="partcopy"> CopyRight &copy2023 , Developed By PROGRAMMER <b>MONCHEL</b></div>
-        </div>
+       <?php
+   include('footer.php');
+   ?>
            </center>
 </body>
 </html>

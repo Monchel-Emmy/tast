@@ -1,3 +1,10 @@
+<?php
+session_start();
+$fname = $_SESSION['fname'];
+$lname = $_SESSION['lname'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,21 +13,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COURSES</title>
     <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="landing.css">
-    
+    <link rel="stylesheet" href="homepage.css">
 </head>
 <body >
 
 
-   <div class="firstpart">
-      <div class="top">
-         <div class="logo"><img src="logo.png" alt="logo"> </div>  <div class="logo"><a href="landingpage.html">HOME</a> |<a href="courses.html">COURSES</a>| <a href="question.html">QUESTIONS</a> | <a href="contact.html">CONTACT</a>|<a href="register.html">REGISTER</a> </div>
-      </div>
+<?php
+   include('header.php');
+   ?>
         
       <div class="container">
          <div style="color: blue;">
       <!-- <center> <marquee>SAME NEW COURSES HERE!!! </marquee></center> </div> -->
-         <h1 class="heading">Our Courses</h1> 
+         <h1 class="heading">Our Course</h1> 
          <div class="conttitle" style="color: rgb(8, 16, 24); background-color: antiquewhite; justify-content: center; padding: 1rem;">Below are categories for different courses. <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem a eum aliquam. Quibusdam accusantium perferendis quia explicabo <br>repudiandae ducimus, suscipit modi laudantium est officiis dolores <br>natus eligendi accusamus adipisci reiciendis.<br>accusantium.</div>
          <div class="box-container">
            
@@ -28,35 +35,35 @@
               <img src="study1.webp" alt="">
               <h3>HTML 5</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, cum? Aspernatur adipisci magnam quod, itaque sit perspiciatis officia sunt. Incidunt delectus quidem, quisquam vel provident ducimus voluptatem fuga illum cupiditate.</p>
-              <a href="#" class="btn">Read more</a>
+              <a href="studycourse.html" class="btn">Read more</a>
            </div>
        
            <div class="box" >
                <img src="study2.webp" alt="">
                <h3>CSS</h3>
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, cum? Aspernatur adipisci magnam quod, itaque sit perspiciatis officia sunt. Incidunt delectus quidem, quisquam vel provident ducimus voluptatem fuga illum cupiditate.</p>
-               <a href="#" class="btn">Read more</a>
+               <a href="studycourse.html" class="btn">Read more</a>
             </div>
        
             <div class="box">
                <img src="study3.jpg" alt="">
                <h3>JS</h3>
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, cum? Aspernatur adipisci magnam quod, itaque sit perspiciatis officia sunt. Incidunt delectus quidem, quisquam vel provident ducimus voluptatem fuga illum cupiditate.</p>
-               <a href="#" class="btn">Read more</a>
+               <a href="studycourse.html" class="btn">Read more</a>
             </div>
        
             <div class="box">
                <img src="study4.jpg" alt="" width="">
                <h3>OTHER</h3>
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, cum? Aspernatur adipisci magnam quod, itaque sit perspiciatis officia sunt. Incidunt delectus quidem, quisquam vel provident ducimus voluptatem fuga illum cupiditate.</p>
-               <a href="#" class="btn">Read more</a>
+               <a href="studycourse.html" class="btn">Read more</a>
             </div>
        
             <div class="box">
                <img src="study3.jpg" alt="">
                <h3>NICE</h3>
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, cum? Aspernatur adipisci magnam quod, itaque sit perspiciatis officia sunt. Incidunt delectus quidem, quisquam vel provident ducimus voluptatem fuga illum cupiditate.</p>
-               <a href="#" class="btn">Read more</a>
+               <a href="studycourse.html" class="btn">Read more</a>
             </div>
          </div>
        
@@ -65,44 +72,11 @@
 
        </div>
    
-       <center> <div class="other"> Help Center:</div><hr>
-         <div class="thirdpart">
-             <div class="part0"><h3>EDUCATIONAL TOOLS</h3></div>
-             <div class="part0"> <h3>SUPPORT</h3> </div>
-             <div class="part0"> <h3>CONNECT</h3></div>
-             <div class="part0"> <h3>About</h3></div>
-             <div class="part0"> <h3>Address</h3></div>
-             <div class="part0">
-                 <span>Learning Library</span><br>
-                 <span>Guided Lessons</span><br>
-                 <span></span><br>
-              </div>
-             <div class="part0"> 
-                 <span>Help Center</span><br>
-                 <span>Give Gift</span><br>
-                 <span>Contact Us</span><br>
-                 <span>FeedBack</span><br></div>
-             <div class="part0">
-     
-                 <span>Our Blog</span><br>
-                 <span>Tell us what you think</span><br>
-                 <span>Youtube</span><br>
-                 <span>Whatsapp</span><br>
-                 <span>Tweeter</span><br>
-                 <span>LinkedIn</span><br>
-             </div>
-             <div class="part0">
-                 <span>Company</span><br>
-                 <span>Privacy Policy</span><br>
-                 <span>Terms and Service</span><br>
-             </div>
-             <div class="part0">
-                 <span>Rwanda , Kigali city</span><br>
-                 <span>phoneNumber:+25782419365</span><br>
-                 <span>Email: LearnAll@gmail.com</span><br>
-             </div>
-             <div class="partcopy"> CopyRight &copy2023 , Developed By PROGRAMMER <b>MONCHEL</b></div>
-            </div>
-            </center>
+       <center> <div class="other"> Help Center:</div>
+  
+       <?php
+   include('footer.php');
+   ?>
+           </center>
 </body>
 </html>

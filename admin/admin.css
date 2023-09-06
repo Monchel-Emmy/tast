@@ -1,0 +1,41 @@
+.header{
+    height: 5rem;
+    width: auto;
+    background-color: rgb(15, 122, 136);
+
+}
+
+.header li{
+   list-style: none;
+    margin-left: 5rem;
+    float: right;
+}
+.all{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10rem 10rem ;
+    margin: 2rem;
+}
+
+.all1{
+    background-color: aquamarine;
+color: rgb(0, 0, 0);
+/* height: 15rem; */
+margin: 2rem;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

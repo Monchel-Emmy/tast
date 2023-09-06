@@ -1,3 +1,11 @@
+<?php
+session_start();
+$fname = $_SESSION['fname'];
+$lname = $_SESSION['lname'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,33 +13,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="watchingpage.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="firstpart">
-   <div class="top">
-      <div class="logo"><img src="logo.png" alt=""> </div>  <div class="logo"><a href="landingpage.html">HOME</a> |<a href="courses.html">COURSES</a>| <a href="question.html">QUESTIONS</a> | <a href="contact.html">CONTACT</a>|<a href="register.html">REGISTER</a> </div>
-   </div>
-  <div class="cont" style="">
-   
- <center><div class="CONTACT" style="background-color: rgb(30, 107, 84);;color: black; height: 30rem; width: 50rem; border-radius: 30px;">
-           <div>    <p>OUR CONTACT :</p>
-                
-                    PHONENUMBER: 0788888888<br>
-                    Email: tuyisengeemmanuel@gmail.com<br>
-                    tweeter: LearnAll<br></div> 
-                    <div style="margin-top: 3rem;">Any Suggestion or problem you can tell us:<br>
-                        <form> 
-                            Email:<input type="email" placeholder="myemail@gmail.com"><br>
-         <textarea style="height: 15rem; width: 30rem;" placeholder="Enter Message...."></textarea><br>
-         <button type="submit">Send</button>
-                    </form></div>
-                </div>
-                </center>
-  </div>
+<?php
+   include('header.php');
+   ?>
+   <div class="watch">
+  <h2>Bellow are same exercises you can work to develop your skills  ! </h2><br><P>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+     Consequatur accusantium recusandae consequuntur nihil facere, eligendi nisi. 
+     Ipsam modi suscipit dignissimos laudantium eos,
+     autem enim error deserunt sunt, fugit tempore dolores.</P>
 
-</div>
-<center> <div class="other"> Help Center:</div><hr>
+   <div class="exers" style="height: 5rem;"> <span>Q1. Calcute the area of rectangle using ...</span><br>
+    <input type="text" name="answer" id="" placeholder="enter your answer"><br> <button type="submit">submit</button> </div>
+   
+    <div class="exers" style="height: 5rem;"> <span>Q2. Calcute the area of rectangle using ...</span><br>
+        <input type="text" name="answer" id="" placeholder="enter your answer"> <br><button type="submit">submit</button>  </div>
+  
+        <div class="exers" style="height: 5rem;"> <span>Q3. Calcute the area of rectangle using ...</span><br>
+            <input type="text" name="answer" id="" placeholder="enter your answer"> <br><button type="submit">submit</button> </div>
+   
+            <div class="exers" style="height: 5rem;"> <span>Q4. Calcute the area of rectangle using ...</span><br>
+                <input type="text" name="answer" id="" placeholder="enter your answer"> <br><button type="submit">submit</button>  </div>
+   
+  
+   </div></div>
+
+   <center> <div class="other"> Help Center:</div><hr>
     <div class="thirdpart">
         <div class="part0"><h3>EDUCATIONAL TOOLS</h3></div>
         <div class="part0"> <h3>SUPPORT</h3> </div>

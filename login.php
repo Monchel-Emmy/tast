@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,26 +14,37 @@
 <body>
     <div class="firstpart">
    <div class="top">
-      <div class="logo"><img src="logo.png" alt=""> </div>  <div class="logo"><a href="landingpage.html">HOME</a> |<a href="courses.html">COURSES</a>| <a href="question.html">QUESTIONS</a> | <a href="contact.html">CONTACT</a>|<a href="register.html">REGISTER</a> </div>
-   </div>
-  
-    
-    <div class="ex"><P><center>Importants questions and their answers</center></P></div>
-    <div class="other" style="color: black;"> <center>All courses You Want are here! :</center></div>
-  <div class="cont" style="background-color: rgb(6, 110, 93); padding: 3rem; display: flex; justify-content: space-around;">
-  <span style="">MATHEMATICS Questions</span><br><span>COMPUTER SCIENCE</span><br>  <span>MATHEMATICS Questions</span><br><span>MATHEMATICS Questions</span><br><span>MATHEMATICS Questions</span><br>
+      <div class="logo"><img src="logo.png" alt=""> </div>  <div class="logo"><a href="landingpage.html">HOME</a> |<a href="courses.html">COURSES</a>| <a href="question.html">QUESTIONS</a> | <a href="contact.html">CONTACT</a></div>
    </div>
 
-   <div class="cont" style="background-color: rgb(6, 110, 93); padding: 3rem; display: flex; justify-content: space-around;">
-      <span style="">MATHEMATICS Questions</span><br><span>COMPUTER SCIENCE</span><br>  <span>MATHEMATICS Questions</span><br><span>MATHEMATICS Questions</span><br><span>MATHEMATICS Questions</span><br>
-       </div>
+<center> <div class="container"  style="margin-top: 5rem; background-color: rgb(15, 122, 136); width: 30rem;height: 20rem;border-radius: 10PX; ">
+    <div class="grid1"  >
+    <div id="welcomeMessage">
+<?php
+   if (isset($_SESSION['error'])) {
+           echo('<p style="color:red">'.$_SESSION['error']."</p>");
+    }
+    ?>
+       <p><h3>Welcome to Login Page.</h3></p> 
+    </div>
+    <form action="login_process.php" method="POST">
+    <div class="grid2">
+        Email:<br>
+        <input type="text" name="email" id=""><br>
+        Password:<br>
+        <input type="text" name="pname" id=""><br>
 
-       <div class="cont" style="background-color: rgb(6, 110, 93); padding: 3rem; display: flex; justify-content: space-around;">
-         <span style="">MATHEMATICS Questions</span><br><span>COMPUTER SCIENCE</span><br>  <span>MATHEMATICS Questions</span><br><span>MATHEMATICS Questions</span><br><span>MATHEMATICS Questions</span><br>
-          </div>
- 
- 
-
+        <select name="category" id="">
+            <option value="student" >Student</option>
+            <option value="lecturer">Lecturer</option>
+            <option value="others">Others</option>
+           </select><br>
+           
+       <p>If you don't have any account you can now<a href="register.html"> REGISTER</a>here.</p><br>
+       
+        <div class="sub"  style="background-color: rgb(119, 117, 115); width: 15rem; "><button type="submit" style="background-color: rgb(119, 117, 115); ">Login</button></div></p>
+    </div></form><p> <a href="forgetpassword.html">Forget you Password?</a> </p>
+   </div></center> 
 </div>
 <center> <div class="other"> Help Center:</div><hr>
     <div class="thirdpart">
@@ -70,7 +85,16 @@
         <div class="partcopy"> CopyRight &copy2023 , Developed By PROGRAMMER <b>MONCHEL</b></div>
     </div>
        </center>
+
+       <script>
+        const welcomeMessage = document.getElementById("welcomeMessage");
+        setTimeout(() => {
+                welcomeMessage.style.display = "none";
+            }, 2000);
+      </script>
 </body>
 </html>
+
+
 
 
