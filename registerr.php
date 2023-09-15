@@ -14,11 +14,11 @@ session_start();
 <body>
     <div class="firstpart">
     <div class="top">
-      <div class="logo"><img src="logo.png" alt=""> </div>  <div class="logo"><a href="landingpage.php">HOME</a> |<a href="courses.php">COURSES</a>| <a href="question.php">QUESTIONS</a> | <a href="contact.php">CONTACT</a>|<a href="registerr.php">REGISTER</a> </div>
+      <div class="logo"><img src="logo.png" alt=""> </div>  <div class="logo"><a href="landingpage.php">HOME</a><a href="courses.php">COURSES</a> <a href="question.php">QUESTIONS</a> <a href="contact.php">CONTACT</a><a href="registerr.php">REGISTER</a> </div>
    </div>
 <center> 
   <div id="welcomeMessage">
-<?php
+  <?php
    if (isset($_SESSION['error'])) {
            echo('<p style="color:red">'.$_SESSION['error']."</p>");
     }

@@ -21,17 +21,34 @@ require_once '../config.php';
         $result = mysqli_query( $con,"SELECT * FROM lecturer");
        
         while( $row = mysqli_fetch_assoc($result)){      			
-
-         echo  " <tr> <td>".$row['l_id']."</td> <td>".$row['l_firstname']."</td> <td>".$row['l_lastname']."</td> <td>".$row['l_email']."</td> <td>".$row['l_password']."</td> <td> </td> <td> </td><td><button type='submit'>Edit </button> | <button type='submit'>Delete</button></td></tr>";
-
-
-        }
-        
-         mysqli_close($con) ;
-          
-       
- 
-       ?>
+            ?>
+            <tr> <td><?php echo $row['l_id'] ?></td>
+             <td><?php echo $row['l_firstname']?></td> 
+             <td> <?php echo $row['l_lastname']?></td> 
+             <td> <?php echo $row['l_email']?></td> 
+             <td><?php echo $row['l_password']?></td> 
+             <td> 
+               <form action="update_lecturer.php" method="post">
+                    <input type='hidden' name='id' value="<?php echo $row['l_id'] ?>">
+                    <input type='submit' name='update' value='Update'>
+                  </form> |
+             
+             <form action="delete_lecturer.php" method="post">
+                    <input type='hidden' name='id' value="<?php echo $row['l_id'] ?>">
+                    <input type='submit' name='delete' value='Delete'>
+                  </form>
+                    </td><td></td><td></td>
+                   
+                   </tr>
+           
+           <?php
+                   }
+                   
+                    mysqli_close($con) ;
+                     
+                  
+            
+                  ?>
         </table>
         <a href="newuser.php">Add new User</a>
     </center>

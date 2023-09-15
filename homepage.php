@@ -1,10 +1,8 @@
+
 <?php
-session_start();
-$fname = $_SESSION['fname'];
-$lname = $_SESSION['lname'];
-
+include('config.php');
+$result = mysqli_query( $con,"SELECT * FROM courses");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +10,6 @@ $lname = $_SESSION['lname'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="landing.css">
-    <link rel="stylesheet" href="homepage.css">
     <title>Document</title>
 </head>
 <body>
@@ -21,8 +18,7 @@ $lname = $_SESSION['lname'];
 <?php
    include('header.php');
    ?>
-     
-   <div class="part1">
+<div class="part1">
 <div id="welcomeMessage">
     <?php
    if (isset($_SESSION['success'])) {
@@ -35,31 +31,33 @@ $lname = $_SESSION['lname'];
      Consequatur accusantium recusandae consequuntur nihil facere, eligendi nisi. 
      Ipsam modi suscipit dignissimos laudantium eos,
      autem enim error deserunt sunt, fugit tempore dolores.</P>
-  
-   <div class="vid">
-    <div class="vid1"> <img src="study.jpg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v<br><button> <a href="watchingpage.html">Start Watching</a>  </button></div>
-    <div class="vid1"><img src="study.jpg" alt=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v <br><button><a href="watchingpage.html">Start Watching</a></button> </div>
-    <div class="vid1"> <img src="study.jpg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v <br><button><a href="watchingpage.html">Start Watching</a></button></div>
-</div>
-     
+     <div class="new" style="color:black"><center>New Courses:</center></div>  
  </div>
+  <div class="box-cont" style="background:black; overflow-y:auto;  display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 3px;
+    background-color: black;">
+   <div class="bo" style ="overflow-x: hidden"><img scr="logo.png">hello lorem ipsume thisns djdfhjegvyug4yatruawtvuircaeariaueyruilabwtytrcyaruiyaceuitruivauertcbytrbuivrtuicyruitaiutcruiiaycuriucuisrbubyvsubryubtruveuitrabvlutburyu</div>
+   <div class="bo" style ="overflow-x: hidden">hello lorem ipsume thisns djdfhjegvyug4yatruawtvuircaearia</div>
+   <div class="bo" style ="overflow-x: hidden">hello</div>
+   <div class="bo" style ="overflow-x: hidden">hello</div>
+   <div class="bo" style ="overflow-x: hidden">hello</div>
+   <div class="bo" style ="overflow-x: hidden">hello</div>
+   <div class="bo" style ="overflow-x: hidden">hello</div>
+   <div class="bo" style ="overflow-x: hidden">hello</div>
+   <div class="bo" style ="overflow-x: hidden">hello</div>
+   <div class="bo" style ="overflow-x: hidden">hello</div>
+   <div class="bo" style ="overflow-x: hidden">hello</div>
+   <div class="bo" style ="overflow-x: hidden">hello</div>
+   <div class="bo" style ="overflow-x: hidden">hello</div>
+
+
+  </div>
     </div>
-    
-    <div class="other"> <center>New Courses:</center></div>
   
-    <div class="secondpart">
-        <div class="grid2"> <img src="study.jpg" alt="">1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v<br><button>Take Course</button></div>
-        <div class="grid2"><img src="study.jpg" alt=""> 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v<br><button>Take Course</button> </div>
-        <div class="grid3"> <img src="study.jpg" alt="">3Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v <br><button>Take Course</button></div>
-    </div>
 
-    <div class="secondpart">
-        <div class="grid2"> <img src="study.jpg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi veniam?<br><button>Take Course</button></div>
-        <div class="grid2"><img src="study.jpg" alt="">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v <br><button>Take Course</button></div>
-        <div class="grid3"> <img src="study.jpg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v <br><button>Take Course</button></div>
-    </div>
 
-   <center> <div class="other"> Help Center:</div><hr>
+   <center> <div class="" style="color:black"> Help Center:</div><hr> 
+
+
    <?php
    include('footer.php');
    ?>

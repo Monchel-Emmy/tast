@@ -14,17 +14,14 @@ if($category =="student"){
         if ($row = mysqli_num_rows($result) > 0) {
             header("Location: homepage.php");
             $_SESSION['success'] = " student  Login successfully!!";
-            $_SESSION['fname'] = $row['s_firstname'];
-            $_SESSION['lname'] = $row['s_lastname'];
+            $_SESSION['fname'] = $row['s_firstname'] ;
 
         } else{
 
         header("Location: login.php");
         $_SESSION['error']="No Account found please! ";
 
-       } 
-    
-     
+       }   
 } }
 
 

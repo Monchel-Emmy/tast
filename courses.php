@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('config.php');
 $result = mysqli_query( $con,"SELECT * FROM courses");
 ?>
@@ -11,7 +12,6 @@ $result = mysqli_query( $con,"SELECT * FROM courses");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COURSES</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="landing.css">
     
 </head>
@@ -20,7 +20,7 @@ $result = mysqli_query( $con,"SELECT * FROM courses");
 
    <div class="firstpart">
    <div class="top">
-      <div class="logo"><img src="logo.png" alt=""> </div>  <div class="logo"><a href="landingpage.php">HOME</a> |<a href="courses.php">COURSES</a>| <a href="question.php">QUESTIONS</a> | <a href="contact.php">CONTACT</a>|<a href="registerr.php">REGISTER</a> </div>
+      <div class="logo"><img src="logo.png" alt=""> </div>  <div class="logo"><a href="landingpage.php">HOME</a><a href="courses.php">COURSES</a> <a href="question.php">QUESTIONS</a> <a href="contact.php">CONTACT</a><a href="registerr.php">REGISTER</a> </div>
    </div>
         
       <div class="container">
@@ -42,7 +42,7 @@ $result = mysqli_query( $con,"SELECT * FROM courses");
               <h4><?php echo $row['c_category']?></h4>
               <h3><?php echo $row['c_title']?></h3>
               <p><?php echo $row['c_description']?>.</p>
-              <a href="#" class="btn">Read more</a>
+              <a href="studycourse0.php" class="btn">Read more</a>
            </div>
        
 <?php 

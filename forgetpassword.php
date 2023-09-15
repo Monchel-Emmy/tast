@@ -22,10 +22,10 @@
         Email:
         <!-- <h4>please check your email to make sure it's correct.</h4> -->
         <input type="text" name="email" id="" placeholder="Enter Email"><br>
-       <p>If you don't have any account you can now<a href="register.html"> REGISTER</a>here.</p><br>
+       <p>If you don't have any account you can now<a href="register.php"> REGISTER</a>here.</p><br>
        
         <div class="sub"  style="background-color: rgb(119, 117, 115); width: 15rem; "><button type="submit" style="background-color: rgb(119, 117, 115); ">Get Code</button></div></p>
-    </div><p> <a href="login.html">Back to Login</a> </p>
+    </div><p> <a href="login.php">Back to Login</a> </p>
    </div></center> 
 </div>
 <center> <div class="other"> Help Center:</div><hr>

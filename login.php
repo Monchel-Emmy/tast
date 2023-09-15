@@ -14,20 +14,21 @@ session_start();
 <body>
     <div class="firstpart">
    <div class="top">
-      <div class="logo"><img src="logo.png" alt=""> </div>  <div class="logo"><a href="landingpage.html">HOME</a> |<a href="courses.html">COURSES</a>| <a href="question.html">QUESTIONS</a> | <a href="contact.html">CONTACT</a></div>
+      <div class="logo"><img src="logo.png" alt=""> </div>  <div class="logo"><a href="landingpage.php">HOME</a><a href="courses.php">COURSES</a><a href="question.php">QUESTIONS</a> <a href="contact.php">CONTACT</a></div>
    </div>
 
-<center> <div class="container"  style="margin-top: 5rem; background-color: rgb(15, 122, 136); width: 30rem;height: 20rem;border-radius: 10PX; ">
-    <div class="grid1"  >
-    <div id="welcomeMessage">
-<?php
+<center>   <div id="welcomeMessage"><?php
    if (isset($_SESSION['error'])) {
            echo('<p style="color:red">'.$_SESSION['error']."</p>");
     }
-    ?>
+    ?></div> <div class="container"  style="margin-top: 5rem; background-color: rgb(15, 122, 136); width: 30rem;height: 20rem;border-radius: 10PX; ">
+    <div class="grid1"  >
+ 
+
        <p><h3>Welcome to Login Page.</h3></p> 
-    </div>
+    
     <form action="login_process.php" method="POST">
+
     <div class="grid2">
         Email:<br>
         <input type="text" name="email" id=""><br>
@@ -40,9 +41,9 @@ session_start();
             <option value="others">Others</option>
            </select><br>
            
-       <p>If you don't have any account you can now<a href="register.html"> REGISTER</a>here.</p><br>
+       <p>If you don't have any account you can now<a href="register.php"> REGISTER</a>here.</p><br>
        
-        <div class="sub"  style="background-color: rgb(119, 117, 115); width: 15rem; "><button type="submit" style="background-color: rgb(119, 117, 115); ">Login</button></div></p>
+        <div class="sub"  style="background-color: rgb(119, 117, 115); width: 15rem; "><button type="submit" style="background-color: rgb(119, 117, 115);  ">Login</button></div></p>
     </div></form><p> <a href="forgetpassword.html">Forget you Password?</a> </p>
    </div></center> 
 </div>

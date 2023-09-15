@@ -33,16 +33,34 @@ require_once '../config.php';
       
        while( $row = mysqli_fetch_assoc($result)){      			
 
-        echo  " <tr> <td>".$row['c_id']."</td> <td>".$row['c_title']."</td> <td >".$row['c_description']."</td> <td>".$row['c_category']."<td><button type='submit'>Edit </button> | <button type='submit'>Delete</button></td></tr>";
 
-
-       }
-       
-        mysqli_close($con) ;
+        ?>
+        <tr> <td><?php echo $row['c_id'] ?></td>
+         <td><?php echo $row['c_title']?></td> 
+         <td> <?php echo $row['c_description']?></td> 
+         <td> <?php echo $row['c_category']?></td> 
+         <td> 
+           <form action="update_course.php" method="post">
+                <input type='hidden' name='id' value="<?php echo $row['c_id'] ?>">
+                <input type='submit' name='update' value='Update'>
+              </form> |
          
-      
-
-      ?>
+         <form action="delete_course.php" method="post">
+                <input type='hidden' name='id' value="<?php echo $row['c_id'] ?>">
+                <input type='submit' name='delete' value='Delete'>
+              </form>
+                </td>
+               
+               </tr>
+       
+       <?php
+               }
+               
+                mysqli_close($con) ;
+                 
+              
+        
+              ?>
       </table>
         <a href="newcourse.php">Add New Course</a>
     </center>

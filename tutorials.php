@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 
-<?php
-session_start();
-$fname = $_SESSION['fname'];
-$lname = $_SESSION['lname'];
-
-?>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,9 +22,9 @@ $lname = $_SESSION['lname'];
      autem enim error deserunt sunt, fugit tempore dolores.</P>
   
    <div class="vid">
-    <div class="vid1"> <img src="study.jpg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v<br><button> <a href="watchingpage.html">Start Watching</a>  </button></div>
-    <div class="vid1"><img src="study.jpg" alt=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v <br><button><a href="watchingpage.html">Start Watching</a></button> </div>
-    <div class="vid1"> <img src="study.jpg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v <br><button><a href="watchingpage.html">Start Watching</a></button></div>
+    <div class="vid1"> <img src="study.jpg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v<br><button> <a href="watchingpage.php">Start Watching</a>  </button></div>
+    <div class="vid1"><img src="study.jpg" alt=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v <br><button><a href="watchingpage.php">Start Watching</a></button> </div>
+    <div class="vid1"> <img src="study.jpg" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eiuque quos animi v <br><button><a href="watchingpage.php">Start Watching</a></button></div>
 </div>
 
 <div class="vid">

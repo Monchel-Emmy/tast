@@ -15,16 +15,33 @@ require_once '../config.php';
     <center>
         <h2>LIST OF ALL STUDENTS</h2> <a href="admin.html">back</a>
         <table border="2" style=" border-collapse:collapse">
-        <tr>  <th>ID</th>  <th>First_name</th>  <th>Last_name</th>  <th>Email</th> <th>Password</th> <th>ROLE</th> <th>Action</th></tr>
+        <tr>  <th>ID</th>  <th>First_name</th>  <th>Last_name</th>  <th>Email</th> <th>Password</th> <th>ROLE</th></tr>
         <?php
        
         $result = mysqli_query( $con,"SELECT * FROM students");
        
         while( $row = mysqli_fetch_assoc($result)){      			
+     ?>
+ <tr> <td><?php echo $row['s_id'] ?></td>
+  <td><?php echo $row['s_firstname']?></td> 
+  <td> <?php echo $row['s_lastname']?></td> 
+  <td> <?php echo $row['s_email']?></td> 
+  <td><?php echo $row['s_password']?></td> 
+  <td> 
+    <form action="update_user.php" method="post">
+         <input type='hidden' name='id' value="<?php echo $row['s_id'] ?>">
+         <input type='submit' name='update' value='Update'>
+       </form> |
+  
+  <form action="delete_user.php" method="post">
+         <input type='hidden' name='id' value="<?php echo $row['s_id'] ?>">
+         <input type='submit' name='delete' value='Delete'>
+       </form>
+         </td>
+        
+        </tr>
 
-         echo  " <tr> <td>".$row['s_id']."</td> <td>".$row['s_firstname']."</td> <td>".$row['s_lastname']."</td> <td>".$row['s_email']."</td> <td>".$row['s_password']."</td> <td><td><button type='submit'>Edit </button> | <button type='submit'>Delete</button></td></tr>";
-
-
+<?php
         }
         
          mysqli_close($con) ;

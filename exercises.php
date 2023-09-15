@@ -1,10 +1,3 @@
-<?php
-session_start();
-$fname = $_SESSION['fname'];
-$lname = $_SESSION['lname'];
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">

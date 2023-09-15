@@ -1,6 +1,7 @@
 
 <?php
 session_start();
+require_once '../config.php';
 ?>
 
 <!DOCTYPE html>
@@ -18,19 +19,27 @@ session_start();
     <center>
         <div class="container"  style="margin-top: 4rem; background-color: rgb(15, 122, 136); width: 30rem;height: 30rem; border-radius: 10PX;">
         <div class="explain">
-            <h2>Add new Course</h2> <a href="admin.html">back</a>
+            <h2>UPDATE COURSE</h2> <a href="admin.html">back</a>
         </div>
-        <form action="newcourse_process.php" method="post">
+<?php
+        $id = $_POST['id'];
+
+$result = mysqli_query( $con,"SELECT * FROM courses WHERE c_id = $id ");
+while( $row = mysqli_fetch_assoc($result)){  
+    ?>
+
+        <form action="update_course_process.php" method="post">
+        <input type="hidden" name="id" value="<?php echo $row['c_id']; ?>">
     <div class="course" style="height: 20rem; width: 70%;margin-top: 5rem;">
-        course Title: <input type="text" name="c_title"><br>
-        Description: <textarea name="c_description" id="" cols="30" rows="10"></textarea><br>
-        Image:  <input type="file" name="c_picturer" id="c_picturer" placeholder="course Image" accept=".jpg, .JPG"> <br>  <br><br>
-      Category : <select name="c_category" id="">
+        course Title: <input type="text" name="c_title" value="<?php echo $row['c_title']; ?>"><br>
+        Description: <textarea name="c_description" id="" cols="30" rows="10" value="<?php echo $row['c_description']; ?>"></textarea><br>
+        Image:  <input type="file" name="c_picturer" id="c_picturer" placeholder="course Image" accept=".jpg, .JPG" value="<?php echo $row['c_picturer']; ?>"> <br>  <br><br>
+      Category : <select name="c_category" id="" value="<?php echo $row['c_category'] ;} ?>">
         <option value="ICT">ICT</option>
         <option value="ENGINERRING">ENGINERRING</option>
         <option value="MATHEMATICS">MATHEMATICS</option>
     </select><br><br>
-    <button type="submit" name="">UPLOAD</button>
+    <input type="submit" name="update">UPDATE COURSE</button>
     </div></form></div>
 </center>
 
